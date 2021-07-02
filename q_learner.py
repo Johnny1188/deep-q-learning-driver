@@ -24,13 +24,13 @@ class Q_Learner(nn.Module):
         """
         
         super().__init__()
-        self.deep_q_layers = nn.Sequential(
-            nn.Linear(input_dim,hidden_layers[0]),
-            nn.ReLU(),
-            nn.Linear(hidden_layers[0],hidden_layers[1]),
-            nn.ReLU(),
-            nn.Linear(hidden_layers[1],action_output_dim)
-        )
+
+        layers = [nn.Linear(input_dim,hidden_layers[0]),nn.ReLU()] # Input layer
+        for i in range(0,len(hidden_layers)-1): # Hidden layers
+            layers.extend((nn.Linear(hidden_layers[i],hidden_layers[i+1]),nn.ReLU()))
+        layers.append(nn.Linear(hidden_layers[-1],action_output_dim)) # Output layer
+
+        self.deep_q_layers = nn.Sequential(*layers)
 
     def forward(self,X):
         X = torch.flatten(X,start_dim=1)
