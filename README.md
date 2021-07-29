@@ -16,6 +16,9 @@ Game is built with [PyGame](https://www.pygame.org/news) and is meant to represe
 ## Model used
 Agent uses [Deep Q-learning](https://arxiv.org/abs/1312.5602) model with two layers (default is 64 and 128 units, respectively), relu activation function, and one output layer with 4 units (action space). Pre-trained weights can be found in `weights/q_learner_latest_weights.pt`. Input of this model (state) consists of array with agent's visible segments on the road (0 if vacant, 1 for the place of the agent, 10 for surrounding car, -10 for out of the road) and agent's current speed (scaled down for stability).
 
+![game gif preview](./game/gif/game_animation.gif)
+
+
 ## How to run
 `python run.py [-h] [--mode MODE_TO_RUN] [--episodes NUM_OF_EPISODES]  
               [--difficulty DIFFICULTY_OF_ROAD] [--weights PATH_TO_WEIGHTS] [--cpu_only]  
