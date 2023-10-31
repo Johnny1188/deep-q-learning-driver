@@ -20,22 +20,20 @@ The agent uses [Deep Q-learning](https://arxiv.org/abs/1312.5602) model with two
 
 
 ## How to run
-`python run.py [-h] [--mode MODE_TO_RUN] [--episodes NUM_OF_EPISODES]  
-              [--difficulty DIFFICULTY_OF_ROAD] [--weights PATH_TO_WEIGHTS] [--cpu_only]  
-              [--slow] [--silent]`
+`python run.py [-h] [--mode MODE_TO_RUN] [--episodes NUM_OF_EPISODES] [--difficulty DIFFICULTY_OF_ROAD] [--weights PATH_TO_WEIGHTS] [--cpu_only] [--slow] [--silent]`
 
 This script runs the highway agent with the Deep Q-learning model.
 
 **Optional arguments:**  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-h, --help            show this help message and exit  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--mode MODE           Mode of the script to run (Either 'train' or 'test'), default: 'train'  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--episodes EPISODES   Number of road runs to run, default: 1000  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--difficulty DIFFICULTY
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-h`, `--help`            show this help message and exit  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--mode MODE_TO_RUN`           Mode of the script to run (Either 'train' or 'test'), default: 'train'  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--episodes NUM_OF_EPISODES`   Number of road runs to run, default: 1000  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--difficulty DIFFICULTY_OF_ROAD`
                         Difficulty of the road (number of surrounding cars),
                         default: 2  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--weights WEIGHTS     Path to pre-trained weights. When not specified, the
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--weights PATH_TO_WEIGHTS`     Path to pre-trained weights. When not specified, the
                         the model learns from scratch.                       
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--cpu_only            Include for using only CPU  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--slow                Include for slowing down the road simulation  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--silent              Include for keeping the logs from the progress of agent's
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--cpu_only`            Include for using only CPU  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--slow`                Include for slowing down the road simulation  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--silent`              Include for keeping the logs from the progress of agent's
                         road run silent
